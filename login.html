@@ -3,34 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Mahira</title>
+    <title>Login Mahira</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content {
+            flex: 1;
+            position: relative;
+        }
+        .background-Right, .background-Left {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        .background-Right {
+            right: 0;
+            background: linear-gradient(to right, #ffe1e1, #ff3377);
+        }
+        .background-Left {
+            left: 0;
+            background: linear-gradient(to right, #ff3377, #ffe1e1);
+        }
+        #background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -3;
+        }
+        #slide {
+            width: 50%;
+            max-height: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin-left: 50%;
+            position: absolute;
+            box-shadow: 0 14px 28px #B57281,
+                0 10px 10px #d88899;
+        }
+        .top {
+            width: 200%;
+            height: 100%;
+            position: relative;
+            left: 0;
+            left: -100%;
+        }
+        .l, .r {
+            width: 50%;
+            height: 100%;
+            background: #fff;
+            position: absolute;
+        }
+        .l {
+            left: 0;
+        }
+        .r {
+            right: 0;
+        }
         
+        .content {
+            width: 80%;
+            max-width: 350px;
+            margin: 0 310px;
+            top: 30%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+        }
+        .content h2 {
+            color: #A94064;
+            font-size: 35px;
+        }
+        button {
+            background-color: #A94064;
+            color: white;
+            width: auto;
+            padding: 10px 100px;
+            margin: 0px 50px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid #dfb5bf;
+            box-sizing: border-box;
+        }
+        .on-off {
+            background: none;
+            color: #A94064;
+            margin: 1px 25px;
+            background: none;
+            padding-left: 100px;
+            box-shadow: none;
+        }
     </style>
 </head>
 <body>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-  <div class="header">
-    <h1>
-        <a href="https://www.instagram.com/makeupmavenmahira/"><img src="https://i.pinimg.com/originals/c7/91/04/c79104e522e1611b552ab42bc0fa6f7e.jpg" alt="logo of meme" width="180" height="100"></a>
-    </h1>
-    <a href="https://www.instagram.com/makeupmavenmahira/" class="fa fa-instagram" style="font-size:34px"></a>
-    <a href="https://pin.it/2WYsXfM" class="fa fa-pinterest" style="font-size:34px"></a>
-    <a href="https://www.linkedin.com/in/mahhhiiirraaa" class="fa fa-linkedin" style="font-size:34px"></a>
-    <br>
-    <br>
-    <br>
-</div>
-<div class="navbar">
-    <a href="index.html" class="right">HOME</a>
-  </div>
-
-    <div class="footer">
-        <p style="font-size: 16px; font-weight: bold;">Copyright © MAHIRA. All rights reserved.</p>
-        <p style="font-size: 14px;">This WEBSITE is the property of MAHIRA. It may not be reproduced or distributed without permission.</p>
-            
+    <div class="header">
+        <h1>
+            <a href="https://www.instagram.com/makeupmavenmahira/"><img src="mahlogo.png" alt="logo of meme" width="55" height="15"></a>
+        </h1>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/makeupmavenmahira/" class="fa fa-instagram"></a>
+            <a href="https://pin.it/2WYsXfM" class="fa fa-pinterest"></a>
+            <a href="https://www.linkedin.com/in/mahhhiiirraaa" class="fa fa-linkedin"></a>
+        </div>
     </div>
+    <div class="navbar">
+        <a href="index.html" class="right">HOME</a>
+    </div>
+
+    <div class="main-content">
+        <div id="background">
+            <div class="background-Right"></div>
+            <div class="background-Left"></div>
+        </div>
+
+        <div id="slide">
+            <div class="top">
+                <div class="l">
+                    <div class="content">
+                        <p><b>New User :)</b></p>
+                        <p>Sign-Up NOW!!</p>
+                        <form method="post" onsubmit="return false;">
+                            <div>
+                                <input type="text" placeholder="Email" /> 
+                                <br />
+                                <input type="password" placeholder="Password" />
+                                <br />
+                                <input type="password" placeholder="Re-enter Password" />
+                            </div>
+                        </form>
+                        <button>Register</button>
+                        <button id="LeftToRight" class="on-off"> Already Existing? </button>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="content">
+                        <p><b>We missed you :(</b></p>
+                        <p>Log-in!!</p>
+                        <form method="post" onsubmit="return false;">
+                            <div>
+                                <input type="text" placeholder="email" /> 
+                                <br />
+                                <input type="password" placeholder="password" />
+                            </div>
+                            <button>Login</button>
+                            <button id="RightToLeft" class="on-off">New, Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+   
+   <footer style="color: #D470A2; text-align: center; padding: 10px; background-color: #ffffff;">
+        <b>Copyright © MAHIRA. All rights reserved.</b>
+        <br>
+        This WEBSITE is the property of MAHIRA. It may not be reproduced or distributed without permission.
+    
+   </footer>
+
+    <script>
+        $(document).ready(function () {
+            $("#RightToLeft").on("click", function () {
+                $("#slide").animate({
+                    marginLeft: "0",
+                });
+                $(".top").animate({
+                    marginLeft: "100%",
+                });
+            });
+            $("#LeftToRight").on("click", function () {
+                $("#slide").animate({
+                    marginLeft: "50%",
+                });
+                $(".top").animate({
+                    marginLeft: "0",
+                });
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
