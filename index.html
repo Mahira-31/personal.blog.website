@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MAHIRA'S 1ST WEBSITE</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-        
+            
     </head>
     <body class="body">
         <script src="script.js"></script>
@@ -25,13 +25,25 @@
               document.body.scrollTop = 0;
               document.documentElement.scrollTop = 0;
             }
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+                if (!e.target.matches('.dropbtn')) {
+                    var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                    }
+                }
+            }
         </script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
         <div class="header">
             <h1>
-            <a href="https://www.instagram.com/makeupmavenmahira/"><img src="mahlogo.png" alt="logo of meme" width="55" height="15"></a>
-        </h1>
+                <a href="https://www.instagram.com/makeupmavenmahira/"><img src="mahlogo.png" alt="logo of meme" width="90" height="40"></a>
+            </h1>
             <div class="social-icons">
               <a href="https://www.instagram.com/makeupmavenmahira/" class="fa fa-instagram"></a>
               <a href="https://pin.it/2WYsXfM" class="fa fa-pinterest"></a>
@@ -97,7 +109,10 @@
                 <a href="https://www.instagram.com/iambeckyg/?hl=en"><img src ="https://i.pinimg.com/564x/7d/dc/3a/7ddc3a8a16d8df5f42f25969d1c8307e.jpg" alt="becky" width="220" height="330"></a>
                 <a href="https://www.instagram.com/jamescharles/"><img src ="https://i.pinimg.com/564x/85/9d/f6/859df674c5e5fe3d328619d28170876e.jpg" alt="jamescharls" width="250" height="330"></a>
                 <a href="https://www.instagram.com/mrunu/"><img src ="https://i.pinimg.com/564x/bc/79/97/bc7997bac4a420659b7c7832cd526986.jpg" alt="mrunalpanchal" width="250" height="330"></a>
-                
+                <h4 style="font-size: 40px; color: #c2656d;">BEAUTY THROUGHOUT THE YEARS</h4>
+                <div class="yearbl">
+                    <a href="years.html" class="yearsbeauty"><u>CHECK  THIS  OUT  NOW !!</u></a>
+                </div>
             </div>
             <div class="makeup" id="makeup-section">
                 
@@ -122,7 +137,7 @@
                 <iframe src="https://www.instagram.com/reel/C0cMLpnP8rH/embed/?cr=1&v=13&autoplay=1" width="200" height="350" frameborder="0" scrolling="no" ></iframe>
             </div>
             <div class="collab" id="b-collab">
-                <p>BRANDS THAT REACH OUT TO US FOR COLLABORATION</p>
+                <p>BRANDS COLLABS</p>
                 <iframe src="https://www.instagram.com/reel/C00qfX9rWvg/embed" width="200" height="350" frameborder="0" scrolling="no" ></iframe>
                 <iframe src="https://www.instagram.com/reel/C2uG2X7rWV7/embed" width="200" height="350" frameborder="0" scrolling="no" ></iframe>
                 <iframe src="https://www.instagram.com/reel/C2CpUKhrexm/embed" width="200" height="350" frameborder="0" scrolling="no" ></iframe>
@@ -169,10 +184,11 @@
                         Sign up to receive exclusive Blogs/Newsletters:
                         <input type="email" placeholder="Your email" id="emailInput">
                         <button onclick="submitForm()">Sign Up</button>
+            
                     </div>
                 </div>
             </div>
-            
+            <script src="script.js"></script>
             <div class="copyr">
                 <b>Copyright © MAHIRA. All rights reserved.</b>
                 <br>
